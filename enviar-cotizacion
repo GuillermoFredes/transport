@@ -1,0 +1,27 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recoger los datos del formulario
+    $nombre = htmlspecialchars($_POST['nombre']);
+    $email = htmlspecialchars($_POST['email']);
+    $telefono = htmlspecialchars($_POST['telefono']);
+    $origen = htmlspecialchars($_POST['origen']);
+    $destino = htmlspecialchars($_POST['destino']);
+    $fecha = htmlspecialchars($_POST['fecha']);
+    $hora = htmlspecialchars($_POST['hora']);
+    $num_pasajeros = htmlspecialchars($_POST['num_pasajeros']);
+    $servicios_adicionales = htmlspecialchars($_POST['servicios_adicionales']);
+
+    // Configurar el correo
+    $to = 'guillermo.fredes@osep.mendoza.gov.ar';  // Reemplaza con tu dirección de correo electrónico
+    $subject = 'Nueva Solicitud de Cotización';
+    $message = "Nombre: $nombre\nCorreo Electrónico: $email\nTeléfono: $telefono\nLugar de Origen: $origen\nLugar de Destino: $destino\nFecha de Viaje: $fecha\nHora de Viaje: $hora\nNúmero de Pasajeros: $num_pasajeros\nServicios Adicionales: $servicios_adicionales";
+    $headers = "From: $email";
+
+    // Enviar el correo
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Gracias, tu solicitud ha sido enviada.";
+    } else {
+        echo "Hubo un problema al enviar tu solicitud. Por favor, intenta de nuevo.";
+    }
+}
+?>
