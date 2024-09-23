@@ -298,7 +298,7 @@
 <!--enlace wsp
 <a href="https://wa.me/<+5492614153285>?text=<mensaje-predeterminado>" target="_blank">
     Enviar mensaje en WhatsApp
-</a>-->
+</a>
 
 
 <head>
@@ -328,9 +328,207 @@
     </a>
 </body>
 
+<!--Calificacion
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificación de Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .rating-form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .rating-form h2 {
+            text-align: center;
+        }
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .reviews {
+            max-width: 600px;
+            margin: 20px auto;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .review {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="rating-form">
+    <h2>Califica tu experiencia</h2>
+    <form id="reviewForm">
+        <div class="rating">
+            <label for="rating">Calificación (1-5):</label>
+            <select id="rating" name="rating" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="comments">Comentarios:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Describe tu experiencia" required></textarea>
+        </div>
+
+        <div style="text-align: center;">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
+
+<div class="reviews" id="reviews">
+    <h2>Reseñas</h2>
+</div>
+
+<script>
+    // Función para cargar las reseñas del localStorage
+    function loadReviews() {
+        const reviewsDiv = document.getElementById('reviews');
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+        reviews.forEach(review => {
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+            reviewElement.innerHTML = `<strong>Calificación: ${review.rating}</strong><br>${review.comment}`;
+            reviewsDiv.appendChild(reviewElement);
+        });
+    }
+
+    // Llama a la función al cargar la página
+    loadReviews();
+
+    document.getElementById('reviewForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const rating = document.getElementById('rating').value;
+        const comments = document.getElementById('comments').value;
+
+        // Guarda la reseña en el localStorage
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews.push({ rating, comment: comments });
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+
+        // Muestra la nueva reseña
+        loadReviews();
+
+        // Reiniciar el formulario
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>
+
+-->
+
+<!--Pie de pagina-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-top: 1px solid #ccc;
+        }
+        .company-name {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .social-links {
+            display: flex;
+            align-items: center;
+        }
+        .social-links a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .whatsapp-button img {
+            width: 20px;
+            margin-right: 5px;
+        }
+        .social-links img {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Contenido de la página -->
+
+<footer>
+    <a class="whatsapp-button" href="https://wa.me/+5492614153285" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Chatear por WhatsApp
+    </a>
+    <div class="company-name">
+        <strong>TRANSPORT</strong>
+    </div>
+      <div class="social-links">
+       <!--   <a href="https://twitter.com/tu_usuario" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_bird_logo_2012.svg" alt="Twitter">
+        </a>-->
+        <a href="https://www.instagram.com/tu_usuario" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/tu_usuario" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>
+
 
     
 </body>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
