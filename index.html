@@ -25,12 +25,22 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#carouselExampleCaptions">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#quienes_somos">Quienes Somos</a>
           </li>
-          <li class="nav-item dropdown">
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Cotización">Solicita tu viaje</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contactanos</a>
+        </li>
+         <!-- menu desplegable-->
+        <!--  <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
@@ -43,11 +53,12 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-        </ul>
+        </ul> -->
+        <!-- busqueda
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form>-->
       </div>
     </div>
   </div>
@@ -99,18 +110,27 @@
 
 <!--QUIENES SOMOS-->
 
-<div class="card mb-3" style="text-align:center"  >
-    <img src="https://previews.123rf.com/images/guru86/guru861510/guru86151000618/46703490-dise%C3%B1o-de-la-ilustraci%C3%B3n-de-transporte.jpg" class="card-img-top" alt="logo empresa" style="width:500px;height:600px text-align:center">
+<br>
+
+<div style="text-align: center;">
+  <img src="https://previews.123rf.com/images/guru86/guru861510/guru86151000618/46703490-dise%C3%B1o-de-la-ilustraci%C3%B3n-de-transporte.jpg" class="card-img-top" alt="logo empresa" style="width:500px;height:600px text-align:center">
+
+</div>
+
+<br><br>
+
+<div id="quienes_somos" class="card mb-3" style="text-align:center"  >
     <div class="card-body">
-      <h2 class="card-title">Quines somos?</h2>
+      <h2 class="card-title">¿Quines somos?</h2>
+      <br><br>
       <p class="card-text">En TRANSPORT, no solo transportamos pasajeros, ¡transportamos experiencias! Con un servicio de colectivos y combis que te llevará a cada rincón de la provincia, estamos aquí para hacer que tu viaje sea inolvidable.</p>
       <p class="card-text">Nuestra misión es simple: ofrecerte un viaje cómodo, seguro y divertido. Desde las montañas hasta los viñedos, nuestros vehículos están listos para llevarte a donde quieras ir, ¡sin complicaciones!</p>
       <p class="card-text">Creemos en la calidad, la puntualidad y, sobre todo, en la diversión. Así que, si buscas un viaje que no sea aburrido, ¡estás en el lugar correcto!</p>
-
+<br><br>
       <!--<p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>-->
     </div>
   </div>
-  
+
 
   <!--equipo-->
 
@@ -124,9 +144,9 @@
           <h5 class="card-title">Pablo Gonzalez</h5>
           <p class="card-text">Chofer profesional, larga distancia y turismo</p>
         </div>
-        <div class="card-footer">
+       <!-- <div class="card-footer">
           <small class="text-body-secondary">Last updated 3 mins ago</small>
-        </div>
+        </div>-->
       </div>
     </div>
     <div class="col">
@@ -136,9 +156,9 @@
           <h5 class="card-title">German Lopez</h5>
           <p class="card-text">Chofer profesional, ejecutivo y eventos</p>
         </div>
-        <div class="card-footer">
+       <!-- <div class="card-footer">
           <small class="text-body-secondary">Last updated 3 mins ago</small>
-        </div>
+        </div>-->
       </div>
     </div>
     <div class="col">
@@ -148,15 +168,16 @@
           <h5 class="card-title">Marcela Moyano</h5>
           <p class="card-text">Chofer profesional, eventos y turismo</p>
         </div>
-        <div class="card-footer">
+      <!--  <div class="card-footer">
           <small class="text-body-secondary">Last updated 3 mins ago</small>
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
 
+  <br>
 
-   <!--equipo-->
+   <!--unidades-->
 
    <h2 style="text-align:center">NUESTRAS UNIDADES </h2>
 
@@ -168,9 +189,9 @@
            <h5 class="card-title">Ejecutiva</h5>
            <p class="card-text">Vehiculo climatizado, capacidad para 15 pasajeros, ideal viaje ejecutivo y turismo</p>
          </div>
-         <div class="card-footer">
+         <!--<div class="card-footer">
            <small class="text-body-secondary">Last updated 3 mins ago</small>
-         </div>
+         </div> -->
        </div>
      </div>
      <div class="col">
@@ -180,9 +201,9 @@
            <h5 class="card-title">Escolar</h5>
            <p class="card-text">Vehiculo habilitado para transporte escolar, capacidad 12 personas</p>
          </div>
-         <div class="card-footer">
+         <!--<div class="card-footer">
            <small class="text-body-secondary">Last updated 3 mins ago</small>
-         </div>
+         </div>-->
        </div>
      </div>
      <div class="col">
@@ -192,9 +213,9 @@
            <h5 class="card-title">Turismo </h5>
            <p class="card-text">Unidad para media distancia, capacidad 40 pasajeros, ideal viajes escolares</p>
          </div>
-         <div class="card-footer">
+        <!-- <div class="card-footer">
            <small class="text-body-secondary">Last updated 3 mins ago</small>
-         </div>
+         </div>-->
        </div>
      </div>
    </div>
@@ -255,7 +276,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div id="Cotización" class="container">
         <h4 style="text-align: center;">Solicitud de Cotización</h4>
         <form action="https://formspree.io/f/mblrvzgp" method="post">
             <label for="nombre">Nombre Completo:</label>
@@ -295,38 +316,11 @@
 </body>
 
 
-<!--enlace wsp
-<a href="https://wa.me/<+5492614153285>?text=<mensaje-predeterminado>" target="_blank">
-    Enviar mensaje en WhatsApp
-</a>
 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat en WhatsApp</title>
-    <style>
-        .whatsapp-button {
-            display: inline-block;
-            background-color: #25D366; /* Color de WhatsApp */
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .whatsapp-button:hover {
-            background-color: #128C7E; /* Color de WhatsApp al pasar el ratón */
-        }
-    </style>
-</head>
-<body>
-    <a href="https://wa.me/5492615322291?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n" class="whatsapp-button" target="_blank">
-        Chatear con nosotros en WhatsApp
-    </a>
-</body>
+
+
+
 
 <!--Calificacion
 <!DOCTYPE html>
@@ -503,9 +497,9 @@
 
 <footer>
     <a class="whatsapp-button" href="https://wa.me/+5492614153285" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> <!--Chatea con nosotros!-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> <!-- Chatear por WhatsApp-->
     </a>
-    <div class="company-name">
+    <div id="contacto" class="company-name">
         <strong>TRANSPORT</strong>
     </div>
       <div class="social-links">
