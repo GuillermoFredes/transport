@@ -1,0 +1,456 @@
+/*Fuente del proyecto*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap');
+
+
+/*Colores cooporativos*/
+:root {
+	--oscuro: #081561;
+	--blanco: #ffffff;
+	--claro: hsl(248, 77%, 49%);
+	--negro: #05050f;
+	--degradado: linear-gradient(90deg, var(--claro), var(--oscuro));
+	--star:#eba61b;
+
+}
+
+
+
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+
+}
+
+/*Color de Fondo*/
+*::selection {
+	background: var(--claro);
+	color: var(--blanco);
+}
+
+html {
+	font-size: 62.4%;
+	/*lo colocamos en % al tamaño*/
+	overflow: auto;
+	scroll-behavior: smooth;
+
+}
+
+body {
+	background: whitesmoke;
+
+}
+
+/*Secciones*/
+section {
+	min-width: 100vh;
+	padding: 0 9%;
+	padding-top: 7.5rem;
+	padding-bottom: 2rem;
+}
+
+h4{
+	color: var(--oscuro);
+	font-size: 2.4rem;
+	margin-bottom: 2rem;
+}
+
+h2{
+	text-align: center
+}
+
+.btn {
+	display: inline-block;
+	margin-top: 1rem;
+	padding: .8rem 3rem;
+	border-radius: 5rem;
+	background: var(--degradado);
+	font-size: 1.8rem;
+	color: var(--blanco);
+	cursor: pointer;
+	/*Sombra y separacion */
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+	transition: all .3s linear;
+	/*Total de 3 segundos lineal transicion*/
+}
+
+.btn:hover {
+	/*Esta tranformacion escala una medida mas*/
+	transform: scale(1.1);
+
+}
+
+.heading {
+	text-align: center;
+	background: var(--oscuro);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	padding: 1rem;
+}
+
+
+
+/*Menu*/
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*ocupa todo el ancho*/
+	background-color: white;
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0.1);
+	text-transform: capitalize;
+	padding: 2rem 9%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+}
+
+header .logo {
+	font-size: 2rem;
+	color: var(--oscuro);
+
+}
+
+header .logo span {
+	color: var(--claro);
+
+}
+
+
+
+/*Barra de nav etiquetas enlace*/
+header .navbar a {
+	font-size: 1.8rem;
+	margin-left: 2rem;
+	color: var(--oscuro);
+}
+
+/*Efecto de seleccion*/
+header .navbar a:hover {
+	color: var(--claro);
+
+}
+
+/*Menu Responsivo*/
+header input {
+	display: none;
+
+}
+
+header label {
+	font-size: 3rem;
+	color: var(--claro);
+	cursor: pointer;
+	visibility: hidden;
+	opacity: 0;
+}
+.quienes_somos .history p{
+	font-size: 1.7rem;
+	color: #747070;
+	padding: 1rem 0;
+}
+/*Formulario de presupuesto*/
+.container {
+	max-width: 600px;
+	margin: auto;
+	background: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+}
+
+label {
+	display: block;
+	margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+button {
+	background-color: #28a745;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+button:hover {
+	background-color: #218838;
+}
+
+/* Formulario de calificación */
+.calificacion {
+	padding: 3rem;
+	background: var(--blanco);
+	border-radius: 1rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+	max-width: 50rem;
+	margin: 3rem auto;
+}
+
+.calificacion h4 {
+	color: var(--oscuro);
+	font-size: 2.4rem;
+	margin-bottom: 2rem;
+}
+
+.calificacion .form-group {
+	margin-bottom: 1.5rem;
+}
+
+.calificacion .form-group label {
+	color: var(--oscuro);
+	font-size: 1.6rem;
+	margin-bottom: 0.5rem;
+	display: block;
+}
+
+.calificacion .form-group input,
+.calificacion .form-group textarea {
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid #ddd;
+	border-radius: 0.5rem;
+	font-size: 1.6rem;
+	color: var(--negro);
+}
+
+.calificacion .form-group textarea {
+	resize: vertical;
+}
+
+.calificacion .form-group input:focus,
+.calificacion .form-group textarea:focus {
+	border-color: var(--oscuro);
+	outline: none;
+}
+
+.calificacion button {
+	background: var(--oscuro);
+	color: var(--star);
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	font-size: 1.6rem;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.calificacion button:hover {
+	background: var(--oscuro);
+}
+
+/* Estrellas de calificación */
+.rating {
+	direction: rtl;
+	display: inline-flex;
+	margin-bottom: 1rem;
+}
+
+.rating input {
+	display: none;
+}
+
+.rating label {
+	font-size: 2.5rem;
+	color: #dddddd;
+	cursor: pointer;
+}	
+.rating input:checked~label,
+.rating label:hover~label {
+	color: var(--star);
+}
+
+.rating label:hover,
+.rating input:checked~label {
+	color: var(--star);
+}
+/*Carrusel */
+.opiniones h4 {
+	color: var(--oscuro);
+	font-size: 2.4rem;
+	margin-bottom: 2rem;
+}
+.wrapper{
+	width: 100%;
+	margin-top: 100px;
+	background:#ffffff;
+	padding: 30px 0;
+}
+
+.slider-testimonial{
+	width: 85%;
+	max-width: 1400px;
+	margin: auto;
+}
+
+.testimonial-client{
+	margin-bottom: 15px;
+}
+
+.testimonial-client img{
+	width: 120px;
+	margin:auto;
+}
+
+.client-name{
+	font-family: "Open sans";
+	font-size: 2rem;
+	font-weight:600;
+	text-align: center;
+}
+
+.testimonial-text{
+	padding: 10px 120px;
+}
+
+.testimonial-text p{
+	font-family: "Open sans";
+	font-size: 2rem;
+	font-weight: 400;
+	font-style: italic;
+	text-align: center;
+	color: #454545;
+}
+.testimonial-rating .fa:checked {
+	color: orange;
+}
+
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f9f9f9;
+	padding: 20px;
+	border-top: 1px solid #ccc;
+}
+
+.company-name {
+	text-align: center;
+	flex-grow: 1;
+}
+
+.social-links {
+	display: flex;
+	align-items: center;
+}
+
+.social-links a {
+	margin-left: 10px;
+	text-decoration: none;
+	color: #333;
+}
+
+/* .whatsapp-button {
+	display: flex;
+	align-items: center;
+	background-color: #25D366;
+	color: white;
+	padding: 10px 15px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+} */
+.whatsapp-button img {
+	width: 60px;
+	margin-right: 5px;
+}
+
+.social-links img {
+	width: 25px;
+	height: 25px;
+}
+
+/*Responsivo*/
+
+@media(max-width:1200px) {
+	html {
+		font-size: 55%;
+	}
+}
+
+@media(max-width:990px) {
+	section {
+		padding: 0 3%;
+		padding-top: 7.5rem;
+		padding-bottom: 2rem;
+	}
+}
+
+
+
+@media(max-width:768px) {
+	header label {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header .navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: var(--blanco);
+		padding: 1rem 2rem;
+		/*distancias entre uno y otro*/
+		border-top: .1rem solid rgba(0, 0, 0, .2);
+		box-shadow: 0 .5rem 1rem rgba (0, 0, 0, .1);
+		transform-origin: top;
+		transform: scaleY(0);
+		opacity: 0;
+		/*Crearemos un transicion*/
+		transition: .2s linear;
+	}
+
+	/*Fuente para celu*/
+	header .navbar a {
+		display: block;
+		margin: 2rem 0;
+		font-size: 2rem;
+	}
+
+	/*P boton funcione*/
+	header input:checked~.navbar {
+		transform: scaleY(1);
+		opacity: 1;
+
+	}
+
+	header input:checked~label::before {
+		content: '\f00d';
+	}
+
+
+}
+
+@media(max-width:450px) {
+	html {
+		font-size: 49%;
+	}
+
+
+}
